@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: powerservice
+Version: 0.0.0
+Summary: Package generated to interface with a dummy trading system.
+Home-page: https://1/taaccount/python-powerservice
+Author: Christopher Ottesen
+Author-email: chris@dataespresso.com
+Project-URL: Issue Tracker, https://1/taaccount/python-powerservice/issues
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+License-File: LICENSE
+License-File: AUTHORS.rst
+
+========
+Python Power Service
+========
+
+Package generated to interface with a trading system.
+
+Package will return a random set of open trades for a given day, where each trade contains data for hours, trading volume, and an unique ID.
+
+Note: The package will naively return series for a given date and not take into account for example if the date is in the future.
+Further the numbers for the volume are random and do not have any relationship with previous or subsequent numbers as would normally be the case in real data.
+
+Installation
+============
+Through a terminal navigate to the folder you have the powerservice folder and run
+
+::
+
+    pip install ./python-powerservice
+
+
+Documentation
+=============
+
+The service will be part of the python environment and can be called in code
+::
+
+    from powerservice import trading
+
+Example that will output some trades
+::
+    from powerservice import trading
+    trades = trading.get_trades("29/06/2021")
+
+    print(trades)
+
+
+Changelog
+=========
+
+0.0.0 (2021-06-24)
+------------------
+
+
